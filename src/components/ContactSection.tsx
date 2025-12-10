@@ -67,7 +67,7 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 relative bg-card">
+    <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
@@ -90,7 +90,7 @@ export const ContactSection = () => {
                     <a
                       key={info.label}
                       href={info.href}
-                      className="flex items-start gap-4 p-3 rounded-lg hover:bg-muted transition-colors group"
+                      className="flex items-start gap-4 p-3 rounded-lg hover:bg-muted/50 transition-colors group"
                     >
                       <div className="p-2 bg-gradient-primary rounded-lg">
                         <IconComponent className="w-5 h-5 text-white" />
@@ -159,7 +159,7 @@ export const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="Your full name"
                       required
-                      className="bg-muted border-border focus:border-primary"
+                      className="bg-muted/50 border-border focus:border-primary"
                     />
                   </div>
                   <div className="space-y-2">
@@ -172,7 +172,7 @@ export const ContactSection = () => {
                       onChange={handleInputChange}
                       placeholder="your.email@example.com"
                       required
-                      className="bg-muted border-border focus:border-primary"
+                      className="bg-muted/50 border-border focus:border-primary"
                     />
                   </div>
                 </div>
@@ -186,7 +186,7 @@ export const ContactSection = () => {
                     onChange={handleInputChange}
                     placeholder="Project discussion, collaboration, etc."
                     required
-                    className="bg-muted border-border focus:border-primary"
+                    className="bg-muted/50 border-border focus:border-primary"
                   />
                 </div>
 
@@ -200,7 +200,7 @@ export const ContactSection = () => {
                     placeholder="Tell me about your project or idea..."
                     required
                     rows={6}
-                    className="bg-muted border-border focus:border-primary resize-none"
+                    className="bg-muted/50 border-border focus:border-primary resize-none"
                   />
                 </div>
 

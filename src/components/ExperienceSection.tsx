@@ -1,32 +1,19 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, MapPin, Briefcase, Award } from 'lucide-react';
+import { Calendar, MapPin, Briefcase } from 'lucide-react';
 
 export const ExperienceSection = () => {
   const experiences = [
     {
-      company: 'FlintSol',
-      position: 'AI Developer',
-      location: 'Lahore, Pakistan',
-      duration: 'July 2025 – Present',
-      type: 'Full-Time',
-      current: true,
-      achievements: [
-        'Designed and implemented LLM/GPT-based RAG systems and chatbots to enhance language understanding, automate workflows, and support customer knowledge retrieval',
-        'Developed AI-driven automation solutions, including social media auto-posting and n8n workflows, reducing manual effort and improving operational efficiency'
-      ],
-      technologies: ['LLM', 'GPT', 'RAG', 'LangChain', 'n8n', 'Python']
-    },
-    {
       company: 'Software Alliance',
-      position: 'AI Developer Intern',
+      position: 'AI Internee',
       location: 'Lahore, Pakistan',
-      duration: 'Feb 2025 – May 2025',
+      duration: 'Aug 2024 – Oct 2024',
       type: 'Internship',
-      current: false,
       achievements: [
-        'Designed and implemented LLM- and GPT-based RAG systems to enhance language understanding and automate complex workflows',
-        'Developed machine learning models to improve prediction accuracy and support data-driven decision-making'
+        'Developed multiple machine learning models, significantly enhancing prediction accuracy and supporting data-driven decision-making across projects',
+        'Designed and implemented large language models (LLMs) and integrated GPT APIs with RAG-based systems',
+        'Built intelligent systems enabling advanced language understanding and generation capabilities in various applications'
       ],
       technologies: ['Python', 'Machine Learning', 'LLMs', 'GPT APIs', 'RAG Systems', 'Deep Learning']
     }
@@ -53,80 +40,69 @@ export const ExperienceSection = () => {
     }
   ];
 
-  const education = {
-    degree: 'Bachelor of Science in Data Science',
-    institution: 'Virtual University',
-    location: 'Lahore, Pakistan',
-    duration: '2024 – 2028'
-  };
-
   return (
-    <section id="experience" className="py-24 relative">
+    <section id="experience" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-3">Career Journey</p>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Professional <span className="text-gradient">Experience</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Building AI solutions and gaining valuable industry experience
+          </p>
         </div>
 
         {/* Experience Timeline */}
-        <div className="space-y-8 mb-20">
+        <div className="space-y-8 mb-16">
           {experiences.map((exp, index) => (
             <Card 
               key={index} 
-              className={`card-glass p-8 relative overflow-hidden ${exp.current ? 'border-primary' : ''}`}
+              className={`card-glass p-8 animate-fade-in-up animate-delay-${index * 200}`}
             >
-              {exp.current && (
-                <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-semibold rounded-bl-lg">
-                  Current
-                </div>
-              )}
-              
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex-1">
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold mb-1">
-                      {exp.position}
-                    </h3>
-                    <h4 className="text-xl text-primary font-semibold mb-4">
-                      {exp.company}
-                    </h4>
-                    <div className="flex flex-wrap gap-6 text-muted-foreground text-sm">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-primary" />
-                        <span>{exp.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-primary" />
-                        <span>{exp.location}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Briefcase className="w-4 h-4 text-primary" />
-                        <span>{exp.type}</span>
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gradient mb-2">
+                        {exp.position}
+                      </h3>
+                      <h4 className="text-xl text-primary font-semibold mb-2">
+                        {exp.company}
+                      </h4>
+                      <div className="flex flex-wrap gap-4 text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          <span>{exp.duration}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" />
+                          <span>{exp.location}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Briefcase className="w-4 h-4" />
+                          <span>{exp.type}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-3 mb-6">
-                    <h5 className="font-semibold text-foreground">Key Achievements</h5>
                     {exp.achievements.map((achievement, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                        <p className="text-muted-foreground leading-relaxed">{achievement}</p>
+                        <p className="text-muted-foreground">{achievement}</p>
                       </div>
                     ))}
                   </div>
 
-                  <div className="space-y-3">
-                    <h5 className="font-semibold text-foreground">Technologies</h5>
+                  <div className="space-y-2">
+                    <h5 className="font-medium">Technologies Used:</h5>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
                         <Badge
                           key={tech}
                           variant="outline"
-                          className="border-primary/30 text-primary hover:bg-primary/10 transition-colors"
+                          className="border-primary/30 text-primary hover:bg-primary/10"
                         >
                           {tech}
                         </Badge>
@@ -139,42 +115,29 @@ export const ExperienceSection = () => {
           ))}
         </div>
 
-        {/* Education Section */}
-        <div className="mb-20">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold">
-              <span className="text-gradient">Education</span>
-            </h3>
-          </div>
-          <Card className="card-glass p-8 max-w-2xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Award className="w-8 h-8 text-primary" />
-            </div>
-            <h4 className="text-xl font-bold mb-2">{education.degree}</h4>
-            <p className="text-primary font-semibold mb-2">{education.institution}</p>
-            <p className="text-muted-foreground">{education.location} • {education.duration}</p>
-          </Card>
-        </div>
-
         {/* Certifications */}
         <div>
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold">
-              <span className="text-gradient">Certifications</span>
-            </h3>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h3 className="text-3xl font-bold text-center mb-8">
+            <span className="text-gradient">Certifications</span>
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <Card 
                 key={index} 
-                className="card-glass p-6 text-center"
+                className={`card-glass p-6 animate-fade-in-up animate-delay-${index * 200}`}
               >
-                <Badge className="bg-gradient-accent text-secondary-foreground mb-4">
-                  {cert.type}
-                </Badge>
-                <h4 className="font-semibold text-foreground mb-2">{cert.title}</h4>
-                <p className="text-muted-foreground text-sm mb-2">{cert.issuer}</p>
-                <p className="text-primary text-sm font-medium">{cert.date}</p>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <Badge variant="secondary" className="bg-gradient-accent text-white">
+                      {cert.type}
+                    </Badge>
+                    <span className="text-sm text-muted-foreground">{cert.date}</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">{cert.title}</h4>
+                    <p className="text-muted-foreground text-sm">{cert.issuer}</p>
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
