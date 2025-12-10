@@ -6,69 +6,62 @@
 
 @layer base {
   :root {
-    /* Core Colors - Professional AI/Tech Theme */
-    --background: 210 20% 5%;
-    --foreground: 210 20% 98%;
+    /* Core Colors - Premium Dark Theme */
+    --background: 240 15% 3%;
+    --foreground: 60 10% 96%;
     
-    --card: 210 20% 8%;
-    --card-foreground: 210 20% 98%;
+    --card: 240 12% 6%;
+    --card-foreground: 60 10% 96%;
     
-    --popover: 210 20% 8%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 240 12% 6%;
+    --popover-foreground: 60 10% 96%;
     
-    /* Brand Colors - Tech Blue & Electric Accents */
-    --primary: 220 100% 60%;
-    --primary-foreground: 210 20% 98%;
-    --primary-glow: 220 100% 70%;
+    /* Brand Colors - Emerald & Gold Luxury */
+    --primary: 160 84% 39%;
+    --primary-foreground: 60 10% 96%;
+    --primary-glow: 160 90% 50%;
     
-    --secondary: 270 100% 65%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 45 93% 58%;
+    --secondary-foreground: 240 15% 3%;
     
-    --accent: 190 100% 50%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 280 70% 60%;
+    --accent-foreground: 60 10% 96%;
     
-    --muted: 210 20% 15%;
-    --muted-foreground: 210 10% 60%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 55%;
     
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 60 10% 96%;
     
-    --border: 210 20% 20%;
-    --input: 210 20% 15%;
-    --ring: 220 100% 60%;
+    --border: 240 10% 16%;
+    --input: 240 10% 12%;
+    --ring: 160 84% 39%;
 
     --radius: 0.75rem;
     
-    /* Professional Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-glow)));
-    --gradient-background: linear-gradient(135deg, hsl(var(--background)), hsl(210 20% 8%));
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(210 20% 12%));
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(180 70% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 93% 58%), hsl(35 95% 50%));
+    --gradient-background: linear-gradient(180deg, hsl(240 15% 3%), hsl(240 20% 8%));
+    --gradient-card: linear-gradient(145deg, hsl(240 12% 8%), hsl(240 12% 5%));
     
-    /* Professional Shadows */
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
-    --shadow-elegant: 0 20px 60px -10px hsl(var(--primary) / 0.4);
-    --shadow-card: 0 10px 30px -5px hsl(210 20% 0% / 0.3);
+    /* Premium Shadows */
+    --shadow-glow: 0 0 60px hsl(160 84% 39% / 0.25);
+    --shadow-elegant: 0 25px 80px -15px hsl(160 84% 39% / 0.35);
+    --shadow-card: 0 15px 40px -8px hsl(240 20% 0% / 0.5);
     
     /* Animation Variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 240 12% 6%;
+    --sidebar-foreground: 60 10% 96%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 60 10% 96%;
+    --sidebar-accent: 240 10% 12%;
+    --sidebar-accent-foreground: 60 10% 96%;
+    --sidebar-border: 240 10% 16%;
+    --sidebar-ring: 160 84% 39%;
   }
 
   .dark {
