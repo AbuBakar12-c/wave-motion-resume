@@ -41,7 +41,7 @@ export const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 relative">
+    <section id="experience" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">

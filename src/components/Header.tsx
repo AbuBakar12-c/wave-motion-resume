@@ -27,8 +27,8 @@ export const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border/50' 
-          : 'bg-transparent'
+          ? 'bg-background border-b border-border shadow-lg' 
+          : 'bg-background'
       }`}
     >
       <nav className="container mx-auto px-6 py-4">
@@ -75,7 +75,7 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 space-y-4 bg-card/80 backdrop-blur-lg rounded-lg border border-border/50">
+          <div className="md:hidden mt-4 py-4 space-y-4 bg-card rounded-lg border border-border shadow-lg">
             {navItems.map((item) => (
               <a
                 key={item.label}

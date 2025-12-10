@@ -123,8 +123,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent 30%, hsl(var(--primary) / 0.1) 50%, transparent 70%);
-    animation: wave-movement 20s infinite linear;
+    background: linear-gradient(45deg, hsl(var(--background)) 30%, hsl(160 84% 39% / 0.08) 50%, hsl(var(--background)) 70%);
+    animation: wave-movement 25s infinite linear;
   }
   
   .dots-pattern {
@@ -133,60 +133,77 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(hsl(var(--accent) / 0.3) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: dots-float 15s infinite linear;
+    background-image: radial-gradient(hsl(160 84% 39% / 0.15) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    animation: dots-float 20s infinite linear;
   }
   
   .gradient-orb {
     position: absolute;
     border-radius: 50%;
     background: var(--gradient-primary);
-    filter: blur(40px);
-    opacity: 0.6;
-    animation: orb-float 10s infinite ease-in-out;
+    filter: blur(80px);
+    opacity: 0.15;
+    animation: orb-float 12s infinite ease-in-out;
   }
   
   /* Professional Button Variants */
   .btn-hero {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden font-semibold tracking-wide;
     background: var(--gradient-primary);
-    border: 1px solid hsl(var(--primary) / 0.3);
-    box-shadow: var(--shadow-glow);
+    border: none;
+    box-shadow: 0 4px 20px hsl(160 84% 39% / 0.3);
     transition: var(--transition-smooth);
   }
   
   .btn-hero:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-elegant);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px hsl(160 84% 39% / 0.4);
   }
   
   .btn-secondary {
-    @apply relative;
-    background: hsl(var(--muted));
+    @apply relative font-medium;
+    background: hsl(var(--card));
     border: 1px solid hsl(var(--border));
-    backdrop-filter: blur(10px);
     transition: var(--transition-smooth);
   }
   
   .btn-secondary:hover {
-    background: hsl(var(--muted) / 0.8);
-    border-color: hsl(var(--primary) / 0.5);
+    background: hsl(var(--muted));
+    border-color: hsl(var(--primary));
   }
   
-  /* Card Variants */
+  /* Card Variants - SOLID backgrounds */
+  .card-solid {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 4px 20px hsl(240 20% 0% / 0.3);
+    transition: var(--transition-smooth);
+  }
+  
+  .card-solid:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px hsl(160 84% 39% / 0.15);
+    border-color: hsl(var(--primary) / 0.4);
+  }
+
+  /* Legacy card-glass now uses solid background */
   .card-glass {
-    background: hsl(var(--card) / 0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--border) / 0.5);
-    box-shadow: var(--shadow-card);
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 4px 20px hsl(240 20% 0% / 0.3);
     transition: var(--transition-smooth);
   }
   
   .card-glass:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-elegant);
-    border-color: hsl(var(--primary) / 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px hsl(160 84% 39% / 0.15);
+    border-color: hsl(var(--primary) / 0.4);
+  }
+  
+  /* Section backgrounds */
+  .section-alt {
+    background: hsl(240 12% 5%);
   }
   
   /* Text Effects */
@@ -198,7 +215,13 @@
   }
   
   .text-glow {
-    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+    text-shadow: 0 0 30px hsl(160 84% 39% / 0.4);
+  }
+  
+  /* Professional header */
+  .header-solid {
+    background: hsl(var(--background));
+    border-bottom: 1px solid hsl(var(--border));
   }
 }
 
